@@ -10,18 +10,18 @@
         android:id="@+id/map"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/TowerHorizentalLayoutBottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/UpperButtonHorizentalLayout">
 
     </FrameLayout>
 
     <LinearLayout
+        android:id="@+id/UpperButtonHorizentalLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="49dp"
         android:gravity="top"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent">
@@ -61,6 +61,54 @@
             android:layout_marginTop="1dp"
             android:layout_weight="1"
             android:text="SHIFT" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/TowerHorizentalLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UpperButtonHorizentalLayout">
+
+        <Button
+            android:id="@+id/btnTopLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="좌상위치" />
+
+        <Button
+            android:id="@+id/btnTopRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="우상위치" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/TowerHorizentalLayoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btnBottomLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="좌하위치" />
+
+        <Button
+            android:id="@+id/btnBottomRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="우하위치" />
     </LinearLayout>
 
 
